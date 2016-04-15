@@ -14,9 +14,12 @@ lazy val settings = Seq(
   libraryDependencies ++= Seq(
     "org.scala-lang" % "scala-compiler" % "2.11.8",
     "org.scala-lang" % "scala-reflect" % "2.11.8",
+    "org.scala-lang.modules" %% "scala-parser-combinators" % "1.0.4",
     "com.typesafe.akka" %% "akka-actor" % "2.4.3",
     "com.typesafe.akka" %% "akka-remote" % "2.4.3",
-    "com.chuusai" %% "shapeless" % "2.3.0"
+    "com.chuusai" %% "shapeless" % "2.3.0",
+    "com.github.fommil" %% "spray-json-shapeless" % "1.2.0",
+    "org.apache.commons" % "commons-lang3" % "3.4"
   ),
 
   mainClass in Compile := Some(""),
