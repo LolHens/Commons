@@ -11,7 +11,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Event {
-    private static enum State {
+    private enum State {
         NONE(0), STARTED(1), DONE(2), CANCELLED(3);
 
         private final int phase;

@@ -15,7 +15,7 @@ class Callback[F, L <: HList, R, O](f: F)
 
   def on(func: F): Unit = listeners = func +: listeners
 
-  def onAll(funcList: Seq[F]): Unit = listeners = funcList.toList ::: listeners;
+  def onAll(funcList: Seq[F]): Unit = listeners = funcList.toList ::: listeners
 
   def call: O = Function.sequence(listeners)
 }
@@ -30,7 +30,7 @@ object Callback {
 
   class Func0Unit extends Callback[() => Unit, HNil, Unit, () => Seq[Unit]](() => ()) {
     def on(f: => Unit) =
-      super.on(() => (f))
+      super.on(() => f)
   }
 
 }

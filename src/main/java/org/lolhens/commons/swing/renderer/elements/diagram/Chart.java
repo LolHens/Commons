@@ -76,7 +76,7 @@ public abstract class Chart {
                 double starth = 1;
                 builder.append(new SetColor(Color.white));
                 builder.append(new Rect(true).transform(startx, starty, 1, starth).transformAbsolute(null, null, 150d, null));
-                double anzahl = (1d / (double) size());
+                double anzahl = (1d / size());
                 double x = 0;
                 double y = 0;
 

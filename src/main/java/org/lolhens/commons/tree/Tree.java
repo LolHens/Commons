@@ -5,56 +5,56 @@ import java.util.List;
 
 public interface Tree<Leaf> {
     // Leaf
-    public boolean hasLeaf();
+    boolean hasLeaf();
 
-    public Leaf getLeaf();
+    Leaf getLeaf();
 
-    public void setLeaf(Leaf leaf);
+    void setLeaf(Leaf leaf);
 
-    public void removeLeaf();
+    void removeLeaf();
 
     // Root
-    public boolean hasRoot();
+    boolean hasRoot();
 
-    public Tree<Leaf> getRoot();
+    Tree<Leaf> getRoot();
 
-    public void setRoot(Tree<Leaf> root);
+    void setRoot(Tree<Leaf> root);
 
-    public void removeRoot();
+    void removeRoot();
 
     // Branch
-    public boolean hasBranches();
+    boolean hasBranches();
 
-    public int size();
+    int size();
 
-    public List<Tree<Leaf>> getBranches();
+    List<Tree<Leaf>> getBranches();
 
-    public boolean hasBranch(int index);
+    boolean hasBranch(int index);
 
-    public boolean hasBranch(Tree<Leaf> branch);
+    boolean hasBranch(Tree<Leaf> branch);
 
-    public boolean hasBranch(Leaf leaf);
+    boolean hasBranch(Leaf leaf);
 
-    public Tree<Leaf> getBranch(int index);
+    Tree<Leaf> getBranch(int index);
 
-    public Tree<Leaf> getBranch(Tree<Leaf> branch);
+    Tree<Leaf> getBranch(Tree<Leaf> branch);
 
-    public Tree<Leaf> getBranch(Leaf leaf);
+    Tree<Leaf> getBranch(Leaf leaf);
 
-    public void addBranch(Tree<Leaf> branch);
+    void addBranch(Tree<Leaf> branch);
 
-    public void addBranch(int index, Tree<Leaf> branch);
+    void addBranch(int index, Tree<Leaf> branch);
 
-    public void addBranches(Collection<Tree<Leaf>> branches);
+    void addBranches(Collection<Tree<Leaf>> branches);
 
-    public void removeBranch(int index);
+    void removeBranch(int index);
 
-    public void removeBranch(Leaf leaf);
+    void removeBranch(Leaf leaf);
 
-    public void removeBranch(Tree<Leaf> branch);
+    void removeBranch(Tree<Leaf> branch);
 
     // Tree
-    public int getTreeSize();
+    int getTreeSize();
 
-    public List<Leaf> getTreeLeaves();
+    List<Leaf> getTreeLeaves();
 }

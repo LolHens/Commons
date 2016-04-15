@@ -75,7 +75,7 @@ class AdvancedParsers extends RegexParsers {
 
   protected def quote(string: String) = if (string == "") "" else Pattern.quote(string)
 
-  implicit def parserToRichParser[V](parser: Parser[V]) = new RichParser[V](parser)
+  implicit def parserToRichParser[V](parser: Parser[V]): RichParser[V] = new RichParser[V](parser)
 
   implicit def literalToRichParser(s: String): RichParser[String] = new RichParser(literal(s))
 

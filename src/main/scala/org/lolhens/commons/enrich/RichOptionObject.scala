@@ -11,7 +11,7 @@ class RichOptionObject(val self: Option.type) extends AnyVal {
                                               bf2: CanBuildFrom[List[A], A, M[A]]): Option[M[A]] = {
     val list = in.to[List]
 
-    if (list.find(_.isEmpty).isDefined) return None
+    if (list.exists(_.isEmpty)) return None
     Some(list.map(_.get).to[M])
   }
 

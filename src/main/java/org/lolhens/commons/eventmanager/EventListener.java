@@ -26,7 +26,7 @@ public @interface EventListener {
     @Target({METHOD})
     @Retention(RUNTIME)
     @Documented
-    public static @interface Group {
+    @interface Group {
         EventListener[] value();
 
         String[] filter() default {};
@@ -35,7 +35,7 @@ public @interface EventListener {
     @Target({METHOD, FIELD, CONSTRUCTOR, TYPE})
     @Retention(RUNTIME)
     @Documented
-    public @interface Filter {
+    @interface Filter {
         String value();
     }
 }
