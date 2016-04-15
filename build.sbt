@@ -33,7 +33,7 @@ lazy val root = Project("Commons", file("."))
     JavaAppPackaging,
     UniversalPlugin)
   .settings(settings: _*)
-  .aggregate(scala, java)
+  .aggregate(scala, java, network, eventmanager)
 
 lazy val scala = project.in(file("scala"))
   .enablePlugins(
