@@ -35,14 +35,28 @@ lazy val root = Project("Commons", file("."))
   .settings(settings: _*)
   .aggregate(scala, java)
 
-lazy val scala = Project("scala", file("scala"))
+lazy val scala = project.in(file("scala"))
   .enablePlugins(
     JavaAppPackaging,
     UniversalPlugin)
   .settings(settings: _*)
 
-lazy val java = Project("java", file("java"))
+lazy val java = project.in(file("java"))
   .enablePlugins(
     JavaAppPackaging,
     UniversalPlugin)
   .settings(settings: _*)
+
+lazy val network = project.in(file("network"))
+  .enablePlugins(
+    JavaAppPackaging,
+    UniversalPlugin)
+  .settings(settings: _*)
+  .dependsOn(java)
+
+lazy val eventmanager = project.in(file("eventmanager"))
+  .enablePlugins(
+    JavaAppPackaging,
+    UniversalPlugin)
+  .settings(settings: _*)
+  .dependsOn(java)
